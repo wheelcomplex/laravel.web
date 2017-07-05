@@ -1,0 +1,22 @@
+{
+  "name": "laravel.web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "go": "webpack --hide-modules --watch",
+    "compile": "webpack --hide-modules"
+  },
+  "private": true,
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.16.2",
+    "babel-loader": "^7.1.1",
+    "vue": "^2.3.4",
+    "webpack": "^3.0.0"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  }
+}
