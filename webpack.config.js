@@ -9,12 +9,20 @@ module.exports={
     },
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            }
-        ]
+           {
+             test: /\.js$/,
+             loader: 'babel-loader',
+             exclude: /node_modules/,
+             query: {
+                presets: ['es2015'],
+                plugins: ["transform-es2015-template-literals"]
+              }
+           },
+           {
+             test: /\.vue$/,
+             loader: 'vue-loader'
+           }
+         ]
     },
     resolve: {
         alias: {
@@ -23,6 +31,7 @@ module.exports={
     },
     plugins: []
 };
+/*
 module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
         sourcemap: true,
@@ -30,4 +39,4 @@ module.exports.plugins.push(
             warnings:false
         }
     })
-);
+);*/

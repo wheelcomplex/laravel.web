@@ -1,14 +1,9 @@
 import Vue from 'vue';
-import Example from './components/Menu';
 
+import MainMenu from './components/Menu.vue';
+import MenuListItem from './components/MenuItem.vue';
 
 new Vue({
     el:'#app',
-    components:{
-        Example
-    },
-    data:{
-        name: 'John',
-        surname: 'Smith'
-    }
+    components:{ MainMenu,MenuListItem }
 });
