@@ -1,9 +1,14 @@
-import Vue from 'vue';
+import './bootstrap';
 
-import MainMenu from './components/Menu.vue';
-import MenuListItem from './components/MenuItem.vue';
+import router from "./routes";
 
 new Vue({
     el:'#app',
-    components:{ MainMenu,MenuListItem }
+    components:{
+        MainMenu,
+        MenuListItem,
+        Order
+    },
+    router:router
 });
+
